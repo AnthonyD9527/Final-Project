@@ -8,6 +8,7 @@ import helmet from "helmet";
 import morgan from "morgan";
 import  path  from "path";
 import { fileURLToPath } from "url";
+import { register} from "./controllers/auth.js";
 
 /* CONFIGURATIONS */
 const __filename = fileURLToPath(import.meta.url);
@@ -27,6 +28,22 @@ app.use("/assets", express.static(path.join(__dirname, 'public/assets')));
 const storage = multer.diskStorage({
     destination: function (req, file, cb){
         cb(null, file.originalname);
-    }
+    },
+    filename: function (req, file, cb){
+        cancelAnimationFrame(null, file.originalname);
+    },
 });
 const upload = multer ({ storage });
+
+/* ROUTES WITH FILES */
+app.post("/auth/register", upload.single("picture"), register);
+
+/* MONGOOSE SETUP */
+const PORT = process.env.PORT || 6001;
+mongoose.connect(process.env.MONGO_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+}).then(() => {
+    app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
+}).catch((error) => console.log(`${error} did not connect`)) ;
+
