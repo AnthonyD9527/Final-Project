@@ -6,6 +6,10 @@ const postSchema = mongoose.Schema (
             type: String,
             required: true,
         },
+        firstName: {
+            type: String,
+            required: true,
+        },
         lastName: {
             type: String,
             required: true,
@@ -17,6 +21,15 @@ const postSchema = mongoose.Schema (
         likes: {
             type: Map,
             of: Boolean,
+        },
+        comments: {
+            types: Array,
+            default: []
         }
-    }
-)
+    },
+    {timestamps: true}
+);
+
+const Post = mongoose.model("Post", postSchema);
+
+export default Post;
