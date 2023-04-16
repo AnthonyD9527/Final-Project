@@ -37,6 +37,13 @@ const FriendListWidget = ({ userId }) => {
       >
         Recent Ratings
       </Typography>
+      <img
+        width="100%"
+        height="auto"
+        alt="Star Rating Example"
+        src="http://localhost:3001/assets/StarReview.jpg"
+        style={{ borderRadius: "0.95rem", margin: "0.95rem 0" }}
+      />
       <Box display="flex" flexDirection="column" gap="1.5rem">
         {friends.map((friend) => (
           <Friend

@@ -1,5 +1,5 @@
 import {
-  ChatBubbleOutlineOutlined,
+  
   FavoriteBorderOutlined,
   FavoriteOutlined,
   ShareOutlined,
@@ -23,7 +23,7 @@ const PostWidget = ({
   likes,
   comments,
 }) => {
-  const [isComments, setIsComments] = useState(false);
+  const [isComments, ] = useState(false);
   const dispatch = useDispatch();
   const token = useSelector((state) => state.token);
   const loggedInUserId = useSelector((state) => state.user._id);
@@ -81,10 +81,8 @@ const PostWidget = ({
           </FlexBetween>
 
           <FlexBetween gap="0.3rem">
-            <IconButton onClick={() => setIsComments(!isComments)}>
-              <ChatBubbleOutlineOutlined />
-            </IconButton>
-            <Typography>{comments.length}</Typography>
+           
+            <Typography></Typography>
           </FlexBetween>
         </FlexBetween>
 

@@ -42,12 +42,12 @@ const Navbar = () => {
   const fullName = `${user.firstName} ${user.lastName}`;
 
   return (
-    <FlexBetween padding="1px" marginRight="180px" marginLeft="200px" marginTop="60px" backgroundColor="#c1c7a4" color="#10c011" paddingRight="100px" paddingLeft="300px" borderRadius="25px">
+    <FlexBetween padding="1px" marginRight="180px" marginLeft="200px" marginTop="60px" backgroundColor="grey" color="#10c011" paddingRight="100px" paddingLeft="300px" borderRadius="25px">
       <FlexBetween gap="1.75rem">
         <Typography
           fontWeight="bold"
           fontSize="clamp(1rem, 2rem, 2.25rem)"
-          color="#80aaa0y"
+          color="red"
           onClick={() => navigate("/home")}
           sx={{
             "&:hover": {

@@ -4,3 +4,22 @@ Math.Random : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/
 isMatch : https://blog.enterprisedna.co/data-validation-using-ismatch-and-variables/
 JWT: https://jwt.io/introduction
 Random User: https://randomuser.me/
+YouTube Videos Used 
+ https://www.youtube.com/watch?v=gWIbT1fbLlA
+ https://www.youtube.com/watch?v=AzA_LTDoFqY
+ https://www.youtube.com/watch?v=EuJc-M35-r0
+
+NPM Packages
+
+Express: https://www.npmjs.com/package/express
+Body-Parser: https://www.npmjs.com/package/body-parser
+Bcrypt: https://www.npmjs.com/package/bcrypt
+cors: https://www.npmjs.com/package/cors
+dotenv: https://www.npmjs.com/package/dot-env
+multer: https://www.npmjs.com/package/multer
+multer-gridfs-storage: https://www.npmjs.com/package/multer-gridfs-storage
+Helmet: https://www.npmjs.com/package/helmet
+Morgan: https://www.npmjs.com/package/morgan
+Json Web Token: https://www.npmjs.com/package/jsonwebtoken
+Mongoose: https://www.npmjs.com/package/mongoose
+

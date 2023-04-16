@@ -179,7 +179,7 @@ const Form = () => {
                   gridColumn="span 4"
                   border={`1px solid ${palette.neutral.medium}`}
                   borderRadius="5px"
-                  p="1rem"
+                  p="1rem" color="red"
                 >
                   <Dropzone
                     acceptedFiles=".jpg,.jpeg,.png"
@@ -242,7 +242,7 @@ const Form = () => {
               sx={{
                 m: "2rem 0",
                 p: "1rem",
-                backgroundColor: palette.primary.main,
+                backgroundColor: "red",
                 color: palette.background.alt,
                 "&:hover": { color: palette.primary.main },
               }}
