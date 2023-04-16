@@ -37,17 +37,17 @@ const Navbar = () => {
   const dark = theme.palette.neutral.dark;
   const background = theme.palette.background.default;
   const primaryLight = theme.palette.primary.light;
-  const alt = theme.palette.background.alt;
+
 
   const fullName = `${user.firstName} ${user.lastName}`;
 
   return (
-    <FlexBetween padding="1rem 6%" backgroundColor={alt}>
+    <FlexBetween padding="1px" marginRight="180px" marginLeft="200px" marginTop="60px" backgroundColor="#c1c7a4" color="#10c011" paddingRight="100px" paddingLeft="300px" borderRadius="25px">
       <FlexBetween gap="1.75rem">
         <Typography
           fontWeight="bold"
           fontSize="clamp(1rem, 2rem, 2.25rem)"
-          color="primary"
+          color="#80aaa0y"
           onClick={() => navigate("/home")}
           sx={{
             "&:hover": {
@@ -56,12 +56,12 @@ const Navbar = () => {
             },
           }}
         >
-          Sociopedia
+          Home
         </Typography>
         {isNonMobileScreens && (
           <FlexBetween
-            backgroundColor={neutralLight}
-            borderRadius="9px"
+            backgroundColor="#100f1f"
+            borderRadius="90px"
             gap="3rem"
             padding="0.1rem 1.5rem"
           >
@@ -75,7 +75,7 @@ const Navbar = () => {
 
       {/* DESKTOP NAV */}
       {isNonMobileScreens ? (
-        <FlexBetween gap="2rem">
+        <FlexBetween gap="2rem" marginRight="250px">
           <IconButton onClick={() => dispatch(setMode())}>
             {theme.palette.mode === "dark" ? (
               <DarkMode sx={{ fontSize: "25px" }} />
@@ -83,9 +83,7 @@ const Navbar = () => {
               <LightMode sx={{ color: dark, fontSize: "25px" }} />
             )}
           </IconButton>
-          <Message sx={{ fontSize: "25px" }} />
-          <Notifications sx={{ fontSize: "25px" }} />
-          <Help sx={{ fontSize: "25px" }} />
+          
           <FormControl variant="standard" value={fullName}>
             <Select
               value={fullName}
